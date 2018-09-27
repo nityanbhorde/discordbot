@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
+var config = require("./config.json");
 var key = config.key;
 
 client.on('ready', () => {
