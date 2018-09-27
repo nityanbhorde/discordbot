@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
-
+var key = config.key;
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -34,7 +34,7 @@ client.on('message', message => {
 	}
 });
 
-client.login('NDk0MDA2NjEzMjE3MjQ3MjMy.DotP3A.v8U8cRyVRrJW_vViTTDSXPnDKsw');
+client.login(key);
 
 function sendFile(name,message){
 		const dir = `./images/${name}/`;
