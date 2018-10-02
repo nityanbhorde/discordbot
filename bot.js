@@ -27,7 +27,7 @@ fs.readFile('credentials.json', (err, content) => {
 });
 
 function authorize(credentials) {
-	// setting variables based on gapi credentials
+  // setting variables based on gapi credentials
   const {client_secret, client_id, redirect_uris} = credentials.installed;
   const oAuth2Client = new google.auth.OAuth2(
       client_id, client_secret, redirect_uris[0]);
@@ -84,12 +84,12 @@ function sendFile(name,message){
 	    var id = files[random].id; // we now have the id of the random file we want, now we need to get the file data
 
 	    var fname = files[random].name; // we need to extract the file extension
-    	var index = fname.indexOf('.')
-    	var ext = fname.substring(index);
-    	ext = ext.toLowerCase();
-    	console.log(ext);
+    	    var index = fname.indexOf('.')
+    	    var ext = fname.substring(index);
+    	    ext = ext.toLowerCase();
+    	    console.log(ext);
 	    var dest = fs.createWriteStream(`./test${ext}`);
-	     drive.files.get({fileId: id, alt: 'media'}, {responseType: 'stream'},
+	    drive.files.get({fileId: id, alt: 'media'}, {responseType: 'stream'},
 		  function(err, res){
 		     res.data
 		     .on('end', () => {
@@ -100,7 +100,7 @@ function sendFile(name,message){
 		     })
 		     .pipe(dest).on('finish', function(){ // once we finished outputting to the file we send the attachment
 		     	const attachment = new Discord.Attachment(`./test${ext}`);
-				message.channel.send(attachment);
+			message.channel.send(attachment);
 		     })
 		  })
 		});
