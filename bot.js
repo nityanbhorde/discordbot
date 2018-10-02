@@ -43,25 +43,26 @@ function authorize(credentials) {
 }
 
 client.on('message', message => {
-	if(message.content === "!Nityan"){
+	const mes = message.content.toLowerCase();
+	if(mes === "!nityan"){
 		sendFile('nityan',message);
 	}
-	if(message.content === "!Ennis"){
+	if(message.content === "!ennis"){
 		sendFile('ennis',message);
 	}
-	if(message.content === "!Dom"){
+	if(message.content === "!dom"){
 		sendFile('dom',message);
 	}
-	if(message.content === "!Tony"){
+	if(message.content === "!tony"){
 		sendFile('tony',message);
 	}
-	if(message.content === "!Brody"){
+	if(message.content === "!brody"){
 		sendFile('brody',message);
 	}
-	if(message.content === "!Squad"){
+	if(message.content === "!squad"){
 		sendFile('squad',message);
 	}
-	if(message.content === "!Steven"){
+	if(message.content === "!steven"){
 		sendFile('steven',message);
 	}
 });
