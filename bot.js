@@ -47,22 +47,22 @@ client.on('message', message => {
 	if(mes === "!nityan"){
 		sendFile('nityan',message);
 	}
-	if(message.content === "!ennis"){
+	if(mes === "!ennis"){
 		sendFile('ennis',message);
 	}
-	if(message.content === "!dom"){
+	if(mes === "!dom"){
 		sendFile('dom',message);
 	}
 	if(message.content === "!tony"){
 		sendFile('tony',message);
 	}
-	if(message.content === "!brody"){
+	if(mes === "!brody"){
 		sendFile('brody',message);
 	}
-	if(message.content === "!squad"){
+	if(mes === "!squad"){
 		sendFile('squad',message);
 	}
-	if(message.content === "!steven"){
+	if(mes === "!steven"){
 		sendFile('steven',message);
 	}
 });
